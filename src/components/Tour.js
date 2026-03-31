@@ -8,18 +8,16 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
       <img src={image} alt={name} width="300" />
 
       <h3>{name}</h3>
-      <h4>₹{price}</h4>
+      <h4>${price}</h4>
 
       <p>
         {readMore ? info : `${info.substring(0, 200)}...`}
-        <button onClick={() => setReadMore(!readMore)}>
-          {readMore ? "Show more" : "Show less"}
-        </button>
-      </p>
-
-      <button onClick={() => removeTour(id)}>Remove</button>
+<button onClick={() => setReadMore(!readMore)}>
+  {readMore ? "Show less" : "Show more"}
+</button>
+<button onClick={() => removeTour(id)}>Not Interested</button></p>
     </div>
+    
   );
 };
-
 export default Tour;
