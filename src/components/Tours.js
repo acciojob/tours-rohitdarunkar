@@ -4,9 +4,11 @@ import Tour from "./Tour";
 const Tours = ({ tours, removeTour }) => {
   return (
     <div>
-      {tours.map((tour) => (
-        <Tour key={tour.id} {...tour} removeTour={removeTour} />
-      ))}
+      {tours.map((tour) => {
+        return (
+          <Tour key={tour.id} {...tour} removeTour={removeTour} />
+        );
+      })}
     </div>
   );
 };
